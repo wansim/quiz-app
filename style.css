@@ -57,7 +57,7 @@ ol, ul {
   border-radius: 6px;
   background-color: aliceblue;
   box-shadow: 0px 4px 8px 0 rgba(0,0,1,0.20), 
-        0px 6px 20px 0 rgba(0,0,0,0.50);/
+        0px 6px 20px 0 rgba(0,0,0,0.0);/
 }
 
 
@@ -77,8 +77,30 @@ ol, ul {
   background-color: #ecf2f9;
 }
 
+/* --------------------------------- */
+/* active states */
+
+
+/* inactive states */
+.start-button button.inactiveState{
+  display: none;
+}
+/* --------------------------------- */
+
+
 /* INFO CARD */
 .main .info-card{
+  display: none;
+}
+
+.info-card.activeState{
+  display: block;
+  background-color: #fff;
+  padding: 50px;
+}
+
+/* inactive states */
+.info-card.inactiveState{
   display: none;
 }
 
@@ -87,6 +109,7 @@ ol, ul {
   flex-direction: column;
   gap: 5px;
   margin: 20px 0px; 
+  
 }
 
 .main .info-card-container .info-rule{
@@ -100,34 +123,58 @@ ol, ul {
 .main .info-card-footer{
   display: flex;
   justify-content: flex-end;
-  gap: 10px;  
-  border-top: 1px solid #3f3c3c;
+  gap: 5px;  
+  border-top: 0.5px solid #cccccc;
+  margin-top: 30px;
 }  
 
 .main .info-card-footer .footer-button-exit button, .footer-button-cont button{
   width: 100px;
-  padding: 5px 0px;
+  margin-top:20px;
+  padding: 10px 0px;
   border-radius: 4px;
+  
 }
 
 .main .info-card-footer .footer-button-exit button{
   border: 1px solid #007AF6; 
-  background-color: transparent;
+  background-color: #fff;
 }
 
 .main .info-card-footer .footer-button-exit button:hover{
   background-color: #007AF6;
+  color: #fff;
  }
 
 .main .info-card-footer .footer-button-cont button{
   background-color:  #007AF6;
   color: #fff;
+  box-shadow: none;
+  outline-color: none;
+}
+
+.main .info-card-footer .footer-button-cont button:hover{
+  background-color:  #fff;
+  color: #007AF6;
+  
 }
 
 
 
 /* QUIZ CARD */
 .main .quiz-card{
+  display: none;
+}
+
+/* active states */
+.quiz-card.activeState{
+  display: block;
+  background-color: #fff;
+  padding: 50px;
+}
+
+/* inactive states */
+.quiz-card.inactiveState{
   display: none;
 }
 
@@ -213,8 +260,23 @@ ol, ul {
 
 
 /* RESULT CARD*/
-
 .main .quiz-result-card{
+  display: none;
+}
+
+
+/* active states */
+.quiz-result-card.activeState{
+  display: block;
+  background-color: #fff;
+}
+
+/* inactive states */
+.quiz-result-card.inactiveState{
+  display: none;
+}
+
+.main .quiz-result-card-container{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -239,15 +301,12 @@ ol, ul {
 
 
 /* RESULT CARD FOOTER*/
-.quiz-result-card .quiz-result-card-container{
-
-}
-
 .main .quiz-result-footer{
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+  margin-top: 50px;
 
 }
 
@@ -268,6 +327,3 @@ ol, ul {
 
 }
 
-.main .quiz-result-card{
-  display: none;
-}
