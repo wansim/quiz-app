@@ -56,14 +56,13 @@ ol, ul {
   min-height: 100%;
   border-radius: 6px;
   background-color: aliceblue;
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 
-        0px 6px 20px 0 rgba(0,0,0,0.20);/
+  box-shadow: 0px 4px 8px 0 rgba(0,0,1,0.20), 
+        0px 6px 20px 0 rgba(0,0,0,0.50);/
 }
 
 
 /* START BUTTON */
 .main .start-button button{
-  display: none;
   padding: 20px 40px;
   border-style: none;
   border-radius: 4px;
@@ -71,8 +70,12 @@ ol, ul {
   font-size: 1.4rem;
   font-weight: 500;
   color: #007AF6;
+  
 }
 
+.main .start-button button:hover{
+  background-color: #ecf2f9;
+}
 
 /* INFO CARD */
 .main .info-card{
@@ -126,7 +129,6 @@ ol, ul {
 /* QUIZ CARD */
 .main .quiz-card{
   display: none;
-
 }
 
 /* QUIZ CARD HEADER */
@@ -211,13 +213,14 @@ ol, ul {
 
 
 /* RESULT CARD*/
+
 .main .quiz-result-card{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   gap: 50px;
-  margin
+
 }
 
 .main .quiz-result-card-container p{
@@ -239,7 +242,6 @@ ol, ul {
 .quiz-result-card .quiz-result-card-container{
 
 }
-
 
 .main .quiz-result-footer{
   display: flex;
@@ -264,4 +266,8 @@ ol, ul {
 
 .main .quiz-result-footer .footer-button-quit button{
 
+}
+
+.main .quiz-result-card{
+  display: none;
 }
